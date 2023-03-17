@@ -9,21 +9,21 @@ class QuickSavingsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Quick Savings'),
+        title: const Text('Quick Savings'),
       ),
       body: Column(
         children: [
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           Text(
             'quick save account: \$${quickSavings.toStringAsFixed(2)}',
-            style: TextStyle(fontSize: 24),
+            style: const TextStyle(fontSize: 24),
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           Expanded(
             child: ListView.builder(
               itemCount: 10, // replace with actual number of transactions
               itemBuilder: (BuildContext context, int index) {
-                return Card(
+                return const Card(
                   child: ListTile(
                     title: Text('Deposit'),
                     subtitle: Text('Mar 1, 2023'),

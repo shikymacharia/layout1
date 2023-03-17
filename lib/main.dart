@@ -261,6 +261,13 @@ class _DashboardPageState extends State<DashboardPage> {
                         ),
                       ],
                     ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: const [
+                        Text('Deposit'),
+                        Text('Withdraw'),
+                      ],
+                    ),
                   ],
                 ),
               ),
@@ -279,7 +286,7 @@ class _DashboardPageState extends State<DashboardPage> {
 
     return Scaffold(
       appBar: AppBar(),
-      body: page,
+      body: const SingleChildScrollView(child: DashboardPage()),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: pageIndex,
         onTap: (index) {
@@ -307,14 +314,7 @@ class _DashboardPageState extends State<DashboardPage> {
           padding: EdgeInsets.zero,
           children: <Widget>[
             DrawerHeader(
-              decoration: const BoxDecoration(
-                image: DecorationImage(
-                  image: NetworkImage(
-                    'https://previews.123rf.com/images/yayayoy/yayayoy1607/yayayoy160700013/63970642-it-is-too-small-emoticon-showing-small-size-with-fingers.jpg',
-                  ),
-                  fit: BoxFit.cover,
-                ),
-              ),
+              decoration: const BoxDecoration(color: Colors.amberAccent),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: const [
@@ -324,7 +324,7 @@ class _DashboardPageState extends State<DashboardPage> {
                     backgroundImage: NetworkImage(
                         'https://images.unsplash.com/photo-1678406498046-78d787f6e12a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80'),
                   ),
-                  SizedBox(height: 10),
+                  SizedBox(height: 5),
                   Text(
                     'Drawer Header',
                     style: TextStyle(

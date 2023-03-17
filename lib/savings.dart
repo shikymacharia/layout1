@@ -7,11 +7,13 @@ class DashboardPage extends StatefulWidget {
   final double lockedSavings = 2000.0;
   final double quickSavings = 3000.0;
 
+  const DashboardPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('My Savings App'),
+        title: const Text('My Savings App'),
       ),
       body: Padding(
         padding: EdgeInsets.all(20.0),
@@ -72,7 +74,6 @@ class DashboardPage extends StatefulWidget {
 
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
     throw UnimplementedError();
   }
 }

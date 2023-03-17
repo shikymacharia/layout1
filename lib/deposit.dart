@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 
 class DepositPage extends StatefulWidget {
@@ -6,7 +8,7 @@ class DepositPage extends StatefulWidget {
 }
 
 class _DepositPageState extends State<DepositPage> {
-  TextEditingController _amountController = TextEditingController();
+ TextEditingController _amountController = TextEditingController();
 
   double _depositAmount = 0.0;
   bool _depositSuccess = false;
@@ -27,9 +29,6 @@ class _DepositPageState extends State<DepositPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Deposit'),
-      ),
       body: Padding(
         padding: EdgeInsets.all(20.0),
         child: _depositSuccess
@@ -85,14 +84,14 @@ class _DepositPageState extends State<DepositPage> {
                   SizedBox(height: 20.0),
                   ElevatedButton(
                     onPressed: () => _makeDeposit(),
-                    child:
-                        Text('Deposit', style: TextStyle(color: Colors.white)),
                     style: ElevatedButton.styleFrom(
-                      primary: Colors.green,
+                      backgroundColor: Colors.green,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20.0),
                       ),
                     ),
+                    child:
+                        Text('Deposit', style: TextStyle(color: Colors.white)),
                   ),
                 ],
               ),
